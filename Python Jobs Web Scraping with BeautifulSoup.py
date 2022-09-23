@@ -1,4 +1,4 @@
-# Scrapping from Python Related Jobs TimesJobs Webpage that are posted a few days ago on a daily basis into a csv file
+# Scrapping for Python Related Jobs TimesJobs Webpage that are posted a few days ago on a daily basis into a csv file
 
 # Importing Libaries
 import datetime
