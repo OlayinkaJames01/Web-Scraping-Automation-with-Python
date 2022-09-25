@@ -1,2 +1,2 @@
 # Web-Scraping-with-BeautifulSoup
-This repo contains my project that leverage the web scraping using the BeautifulSoup library to gather data on python related jobs on TimesJobs recruitment platform and embeds the result in a comma seperated file for ease of applying for those jobs as it fits into my skillsets
+Leveraged web scraping using the beautifulSoup python library to gather data on python related jobs posted on TimesJobs recruitment platform "few days ago" and embeds the result in a file for ease of applying for those jobs
