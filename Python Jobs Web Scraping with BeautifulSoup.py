@@ -47,3 +47,7 @@ if __name__ == "__main__":
         print(f'waiting for {waiting_time} hours...')
         time.sleep(waiting_time*3600)
 
+# Send a mail to the appended mail after 24hrs of scrapping to keep the user aware of recent python related jobs on a dily basis
+
+# Leverage a python mailing library for this
+
