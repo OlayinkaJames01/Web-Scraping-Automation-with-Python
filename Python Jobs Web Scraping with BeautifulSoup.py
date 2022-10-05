@@ -57,6 +57,17 @@ def send_mail():
         #server.starttls()
         server.ehlo()
         server.login('jolayinka463@gmail.com','xxxxxxxxxxxxxx')
+        
+         subject = "Python Job Posting!"
+        body = "James, your dream python job has been posted. Don't mess it up! You can check your spreadsheet or proceed with the link here: https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation="
+
+        msg = f"Subject: {subject}\n\n{body}"
+
+        server.sendmail(
+            'jolayinka463@gmail.com',
+            msg
+
+        )
 
        
 
