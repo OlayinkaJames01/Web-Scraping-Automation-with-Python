@@ -6,6 +6,7 @@ import time
 import csv
 from bs4 import BeautifulSoup
 import requests
+import smtplib
 
 
 # A function that help find job which emcompases the beautifulsoup web scraping program
@@ -47,7 +48,24 @@ if __name__ == "__main__":
         print(f'waiting for {waiting_time} hours...')
         time.sleep(waiting_time*3600)
 
-# Send a mail to the appended mail after 24hrs of scrapping to keep the user aware of recent python related jobs on a dily basis
+# Send a mail that notify the user to check their scrapped data after every 24hrs to keep the user aware of recent python related jobs on a dily basis
 
-# Leverage a python mailing library for this
+def send_mail():
+    if time.sleep(3600):
+        server = smtplib.SMTP_SSL('smtp.gmail.com',465)
+        server.ehlo()
+        #server.starttls()
+        server.ehlo()
+        server.login('jolayinka463@gmail.com','xxxxxxxxxxxxxx')
+
+        subject = "Python Job Posting!"
+        body = "James, your dream python job has been posted. Don't mess it up! You can check your spreadsheet or proceed with the link here: https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation="
+
+        msg = f"Subject: {subject}\n\n{body}"
+
+        server.sendmail(
+            'jolayinka463@gmail.com',
+            msg
+
+        )
 
