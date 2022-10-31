@@ -6,7 +6,9 @@ import time
 import csv
 from bs4 import BeautifulSoup
 import requests
-import smtplib
+
+import smtplib 
+# The smtplib module defines an SMTP client session object that can be used to send mail to any internet machine with an SMTP or ESMTP listener daemon
 
 
 # A function that help find job which emcompases the beautifulsoup web scraping program
@@ -51,7 +53,8 @@ if __name__ == "__main__":
 # Send a mail that notify the user to check their scrapped data after every 24hrs to keep the user aware of recent python related jobs on a dily basis
 
 def send_mail():
-    if time.sleep(3600):
+    if time.sleep(waiting_time*3600):
+        
         server = smtplib.SMTP_SSL('smtp.gmail.com',465)
         server.ehlo()
         #server.starttls()
