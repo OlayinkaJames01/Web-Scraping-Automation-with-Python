@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
 def send_mail():
     if time.sleep(waiting_time*3600):
-        
+        # This send a email alert me every 24 hrs to check my file where my python job is appended to stay up to date
         server = smtplib.SMTP_SSL('smtp.gmail.com',465)
         server.ehlo()
         #server.starttls()
