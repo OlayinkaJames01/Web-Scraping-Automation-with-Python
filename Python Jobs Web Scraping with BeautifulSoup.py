@@ -1,34 +1,11 @@
+from bs4 import BeautifulSoup
+from email_sending import send_email
 import datetime
 import time
 import csv
-from bs4 import BeautifulSoup
 import requests
 import smtplib
 import schedule
-
-# Function to send an email notification
-def send_email():
-    try:
-        # Set up the email server
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.ehlo()
-        server.login('your_email@gmail.com', 'your_app_password')  # Use an app password for security
-        
-        # Email content
-        subject = "New Python Job Postings Available!"
-        body = ("New Python job postings have been added. "
-                "Check the attached CSV file for details.")
-        
-        msg = f"Subject: {subject}\n\n{body}"
-        
-        # Send the email
-        server.sendmail('your_email@gmail.com', 'recipient_email@gmail.com', msg)
-        print("Email sent successfully!")
-
-    except Exception as e:
-        print(f"Failed to send email: {e}")
-    finally:
-        server.quit()
 
 # Function to find jobs
 def find_jobs():
